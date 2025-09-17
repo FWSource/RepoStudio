@@ -1,0 +1,4 @@
+.Rproj.user
+
+# ignore any outputs/reports
+reports/

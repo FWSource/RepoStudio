@@ -19,12 +19,20 @@ colnames(divorced_by_anniverasy)[3:62]<-col_names<-paste("Year", 1:60)
 divorced_by_anniverasy$Year<-1963:2022
 
 library(ggplot2)
-ggplot(divorced_by_anniverasy, aes(x = Year, y = `Year 5`))+
+myplot<-ggplot(divorced_by_anniverasy, aes(x = Year, y = `Year 5`))+
   geom_line()+
   labs(title="Proportion of marriages ending in divorce by the fifth anniversary",
        x="Year of marriage",
        y = "Proportion divorced")+
   theme_minimal()
+myplot
+
+jpeg(file = "reports/5yeardivorcerates.jpeg")
+print(myplot)
+jpeg(file = "5yeardivorcerates.jpeg")
+print(myplot)
+
+dev.off()
 
 ##Generate number of divorces per year
 
