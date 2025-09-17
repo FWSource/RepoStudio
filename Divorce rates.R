@@ -31,7 +31,8 @@ jpeg(file = "reports/5yeardivorcerates.jpeg")
 print(myplot)
 jpeg(file = "5yeardivorcerates.jpeg")
 print(myplot)
-
+jpeg(file = "git_reports/5yeardivorcerates.jpeg")
+print(myplot)
 dev.off()
 
 ##Generate number of divorces per year
